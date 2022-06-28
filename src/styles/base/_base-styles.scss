@@ -1,0 +1,20 @@
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5rem;
+  line-height: 160%;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-dark-xl;
+}
+.wrapper {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.hidden {
+  visibility: hidden;
+}
