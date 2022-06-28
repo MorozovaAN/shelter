@@ -1,0 +1,104 @@
+.page__footer {
+  padding-top: $margin-s;
+}
+.footer {
+  background: url(../assets/images/background-pattern.png),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+}
+.footer__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.8fr;
+  justify-content: space-between;
+  @include screen-xl {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+  @include screen-m {
+    grid-template-columns: 1fr;
+  }
+}
+.footer__contacts,
+.footer__addresses {
+  margin-top: 20px;
+  max-width: 300px;
+  padding-bottom: $margin-m;
+  display: flex;
+  flex-direction: column;
+  @include screen-xl {
+    margin: 0 auto;
+  }
+  @include screen-s {
+    align-items: center;
+    padding-bottom: $margin-s;
+  }
+}
+.footer__title {
+  @include title-l;
+  color: $color-light-xl;
+  @include screen-s {
+    text-align: center;
+    max-width: 250px;
+  }
+}
+.footer__email,
+.footer__tel,
+.footer__address {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  min-height: 32px;
+  transition: all $shelter-transition;
+}
+.footer__email {
+  padding-left: 60px;
+  background: url(../assets/images/contacts-icons/email.svg) no-repeat 0 center;
+  margin-top: 45px;
+  @include screen-s {
+    margin-top: 30px;
+  }
+}
+.footer__tel {
+  padding-left: 60px;
+  background: url(../assets/images/contacts-icons/phone.svg) no-repeat 0 center;
+  margin-top: 43px;
+  @include screen-s {
+    margin-top: 30px;
+  }
+}
+.footer__address {
+  margin-top: 35px;
+  padding-left: 42px;
+  background: url(../assets/images/contacts-icons/marker.svg) no-repeat 0 center;
+  @include screen-s {
+    margin-top: 30px;
+  }
+}
+.footer__link {
+  vertical-align: middle;
+}
+.footer__image-container {
+  align-self: end;
+  @include screen-xl {
+    grid-column: 1 / 4;
+    margin: 0 auto;
+  }
+  @include screen-m {
+    grid-column: 1 / 2;
+  }
+}
+.footer__image {
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  @include screen-m {
+    max-width: 90%;
+  }
+  @include screen-s {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
