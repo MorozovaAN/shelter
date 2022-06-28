@@ -1,0 +1,67 @@
+.button {
+  display: inline-flex;
+  padding: 13px 43px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  font-family: 'Georgia';
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transition: $shelter-transition;
+}
+.button_primary {
+  background: $color-primary;
+  &:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+  &:active {
+    background: $color-light-s;
+  }
+}
+.button_secondary {
+  background: $color-light-xl;
+}
+.button-circle {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: transparent;
+  transition: $shelter-transition;
+  flex-shrink: 0;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $color-primary-light;
+  }
+}
+.button-circle_left {
+  background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%;
+  &:hover {
+    background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%,
+      $color-primary-light;
+  }
+}
+.button-circle_right {
+  background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%;
+  transform: rotate(180deg);
+  &:hover {
+    background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%,
+      $color-primary-light;
+  }
+}
+.button-circle:disabled {
+  border: 2px solid $color-dark-s;
+}
+.button-circle_left:disabled {
+  background: url(../assets/images/other-icons/arrow-disabled.svg) no-repeat 50%;
+}
+.button-circle_right:disabled {
+  background: url(../assets/images/other-icons/arrow-disabled.svg) no-repeat 50%;
+  transform: rotate(180deg);
+}

@@ -6,3 +6,14 @@
 @import 'base/constants';
 @import 'base/mixins';
 @import 'base/base-styles';
+
+//layout imports
+//index page
+@import 'layout/index-page/header';
+@import 'layout/index-page/start-screen';
+@import 'layout/index-page/offer';
+
+//components imports
+@import 'components/logo';
+@import 'components/navigation';
+@import 'components/buttons';

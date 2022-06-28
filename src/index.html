@@ -5,12 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="icon"
-    href="../src/assets/images/other-icons/paw.png"
-    type="image/svg+xml"
-  />
+      rel="icon"
+      href="../src/assets/images/other-icons/paw.png"
+      type="image/svg+xml"
+    />
     <title>Cozy House – Shelter for pets in Boston</title>
   </head>
-  <body>
+  <body class="page">
+    <section class="start-screen page__start-screen" id="start-screen">
+      <header class="header wrapper">
+        <a class="logo header__logo" href="#"
+          ><h1 class="logo__title logo__title_color-primary">Cozy House</h1>
+          <p class="logo__subtitle logo__subtitle_color-light">
+            Shelter for pets in Boston
+          </p>
+        </a>
+        <div class="menu-button">
+          <span class="menu-button__line-color-light"></span>
+        </div>
+        <div class="navigation">
+          <header class="navigation__header">
+            <div class="menu-button-close">
+              <span class="menu-button-close__line-color-light"></span>
+            </div>
+          </header>
+          <nav>
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link_color-light-active"
+                  href="#"
+                  >About the shelter</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link_color-light"
+                  href="./our-pets.html"
+                  >Our pets</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link_color-light"
+                  href="#help"
+                  >Help the shelter</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a
+                  class="navigation__link navigation__link_color-light"
+                  href="#contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="offer page__offer wrapper">
+        <div class="offer__content">
+          <h2 class="offer__title">Not only people need a&nbsp;house</h2>
+          <p class="offer__description">
+            We offer to give a chance to a little and nice puppy with an
+            extremely wide and open heart. He or she will love you more than
+            anybody else in the world, you will see!
+          </p>
+          <a class="button button_primary offer__button" href="#pets"
+            >Make a friend</a
+          >
+        </div>
+        <div class="offer__image-container">
+          <img
+            class="offer__image"
+            src="./assets/images/start-screen-puppy.png"
+            alt="puppy"
+          />
+        </div>
+      </section>
+    </section>
   </body>
 </html>
