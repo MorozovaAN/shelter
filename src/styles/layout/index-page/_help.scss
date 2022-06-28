@@ -1,0 +1,56 @@
+.page__help {
+  padding-top: $margin-l;
+  padding-bottom: $margin-xl;
+  @include screen-s {
+    padding-top: $margin-s;
+    padding-bottom: $margin-s;
+  }
+}
+.help__title {
+  @include title-l;
+  max-width: 310px;
+  margin: 0 auto $margin-m auto;
+  text-align: center;
+  @include screen-s { 
+    margin: 0 auto $margin-s auto;
+  }
+}
+.help-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 10%;
+  row-gap: 55px;
+}
+.help-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include screen-xl {
+    width: 170px;
+    height: 113px;
+  }
+  @include screen-s {
+    width: 130px;
+    height: 87px;
+  }
+}
+.help-list__image-container {
+  width: 60px;
+  height: 60px;
+  @include screen-s {
+    width: 50px;
+    height: 50px;
+  }
+}
+.help-list__image {
+  object-fit: contain;
+  max-width: 100%;
+}
+.help-list__title {
+  @include title-m;
+  margin-top: 30px;
+  @include screen-s {
+    margin-top: 20px;
+  }
+}
