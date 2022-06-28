@@ -1,0 +1,19 @@
+.page__pets {
+  padding-top: $margin-l;
+  padding-bottom: $margin-xl;
+  background-color: $color-light-l;
+}
+.pets__content {
+  display: flex;
+  flex-direction: column;
+}
+.pets__title {
+  @include title-l;
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: $margin-m;
+}
+.pets__button {
+    margin: $margin-m auto 0 auto;
+}
