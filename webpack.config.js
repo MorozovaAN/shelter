@@ -34,6 +34,7 @@ module.exports = {
       filename: 'index.html',
       template: './index.html',
     }),
+    // eslint-disable-next-line new-cap
     new miniCss({
       filename: 'styles.css',
     }),
