@@ -1,0 +1,67 @@
+@mixin title-xl {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 4.4rem;
+  line-height: 130%;
+  @include screen-s {
+    font-size: 3rem;
+  }
+}
+@mixin title-l {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-l;
+  @include screen-s {
+    font-size: 2.5rem;
+  }
+}
+@mixin title-m {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  color: $color-dark-l;
+  letter-spacing: 0.06em;
+  @include screen-s {
+    font-size: 1.5rem;
+    line-height: 110%;
+  }
+}
+@mixin title-s {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
+  color: $color-dark-l;
+  letter-spacing: 0.06em;
+}
+@mixin base-text {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 160%;
+}
+
+@mixin screen-xl {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
+@mixin screen-l {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+@mixin screen-m {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin screen-s {
+  @media (max-width: 450px) {
+    @content;
+  }
+}
