@@ -14,6 +14,12 @@ body {
   max-width: $content-width;
   margin: 0 auto;
   padding: 0 40px;
+  @include screen-l {
+    padding: 0 30px;
+  }
+  @include screen-s {
+    padding: 0 10px;
+  }
 }
 .hidden {
   visibility: hidden;
