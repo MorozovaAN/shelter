@@ -1,0 +1,62 @@
+.button-circle {
+  width: 52px;
+  height: 52px;
+  border: 2px solid $color-primary;
+  box-sizing: border-box;
+  border-radius: 100px;
+  background-color: transparent;
+  transition: $shelter-transition;
+  flex-shrink: 0;
+  cursor: pointer;
+  &:hover {
+    border: 2px solid $color-primary-light;
+  }
+}
+.button-circle:disabled {
+  border: 2px solid $color-dark-s;
+}
+
+.button-circle_double-arrow {
+  background: url(../assets/images/other-icons/arrow-pagination.svg) no-repeat
+      30%,
+    url(../assets/images/other-icons/arrow-pagination.svg) no-repeat 70%;
+
+  &:disabled {
+    background: url(../assets/images/other-icons/arrow-pagination-disabled.svg)
+        no-repeat 30%,
+      url(../assets/images/other-icons/arrow-pagination-disabled.svg) no-repeat
+        70%;
+    border: 2px solid $color-dark-s;
+    cursor: default;
+  }
+
+  &:hover {
+    background-color: $color-primary-light;
+  }
+}
+
+.button-circle_single-arrow {
+  background: url(../assets/images/other-icons/arrow-pagination.svg) no-repeat
+    center;
+  border: 2px solid $color-primary;
+
+  &:hover {
+    background: url(../assets/images/other-icons/arrow-pagination.svg) no-repeat
+      center $color-primary-light;
+  }
+
+  &:disabled {
+    border: 2px solid $color-dark-s;
+    background: url(../assets/images/other-icons/arrow-pagination-disabled.svg)
+      no-repeat center;
+    cursor: default;
+  }
+}
+
+.button-circle_number {
+  background-color: $color-primary;
+  &:hover {
+    border: 2px solid $color-primary;
+    cursor: default;
+  }
+}

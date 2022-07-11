@@ -1,0 +1,25 @@
+.scroll-up {
+  position: fixed;
+  right: 3%;
+  bottom: 4%;
+  width: 45px;
+  height: 45px;
+  z-index: 8;
+  background: url(../assets/images/other-icons/arrow-pagination.svg) no-repeat
+    50% 49% $color-primary;
+  transform: rotate(270deg);
+  opacity: 0;
+  transition: all 0.6s ease;
+  box-shadow: 0px 0px 6px 2px rgb(13 13 13 / 8%);
+  @include screen-m {
+    right: 5%;
+  }
+  @include screen-s {
+    width: 40px;
+    height: 40px;
+  }
+}
+.scroll-up:hover {
+  background: url(../assets/images/other-icons/arrow-pagination.svg) no-repeat
+    50% 49% $color-primary-light;
+}

@@ -1,0 +1,28 @@
+.button {
+  display: inline-flex;
+  padding: 13px 43px;
+  border: 2px solid $color-primary;
+  border-radius: 100px;
+  font-family: 'Georgia';
+  font-size: 1.7rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: $color-dark-3xl;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  transition: $shelter-transition;
+}
+.button_primary {
+  background: $color-primary;
+  &:hover {
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+  &:active {
+    background: $color-light-s;
+  }
+}
+.button_secondary {
+  background: $color-light-xl;
+}
