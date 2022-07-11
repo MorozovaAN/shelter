@@ -1,0 +1,13 @@
+.page_disable-scroll {
+  overflow-y: hidden;
+}
+.page__blur {
+  filter: blur(3px);
+}
+.page__blackout {
+  background: rgba(41, 41, 41, 0.7);
+  height: 1000vh;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
