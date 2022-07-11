@@ -7,7 +7,10 @@ module.exports = {
   mode: 'development',
   devtool: 'source-map',
 
-  entry: './scripts/index.js',
+  entry: {
+    index: './scripts/index-page/index.js',
+    ourPets: './scripts/our-pets-page/our-pets.js',
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -33,8 +36,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: './index.html',
+      chunks: ['index'],
     }),
-    // eslint-disable-next-line new-cap
+    new HtmlWebpackPlugin({
+      filename: 'our-pets.html',
+      template: './our-pets.html',
+      chunks: ['ourPets'],
+    }),
     new miniCss({
       filename: 'styles.css',
     }),
@@ -55,14 +63,7 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      // Options
-                    },
-                  ],
-                ],
+                plugins: [['postcss-preset-env', {}]],
               },
             },
           },
