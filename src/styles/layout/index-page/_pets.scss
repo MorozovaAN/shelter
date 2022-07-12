@@ -15,5 +15,113 @@
   margin-bottom: $margin-m;
 }
 .pets__button {
-    margin: $margin-m auto 0 auto;
+  margin: $margin-m auto 0 auto;
+}
+.pets__button-left {
+  background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%;
+  &:hover {
+    background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%,
+      $color-primary-light;
+  }
+}
+.pets__button-right {
+  background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%;
+  transform: rotate(180deg);
+  &:hover {
+    background: url(../assets/images/other-icons/arrow.svg) no-repeat 50%,
+      $color-primary-light;
+  }
+}
+.pets__button-left:disabled {
+  background: url(../assets/images/other-icons/arrow-disabled.svg) no-repeat 50%;
+}
+.pets__button-right:disabled {
+  background: url(../assets/images/other-icons/arrow-disabled.svg) no-repeat 50%;
+  transform: rotate(180deg);
+}
+
+.slider {
+  display: flex;
+  column-gap: 50px;
+  align-items: center;
+  @media (max-width: 550px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+  }
+}
+.slider_transition {
+  transition: all 1s ease;
+}
+.slider__wrapper {
+  flex-grow: 1;
+  overflow: hidden;
+  @media (max-width: 550px) {
+    order: 1;
+    width: 100%;
+  }
+}
+.slider__content {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  @media (max-width: 1200px) {
+    column-gap: 85px;
+    justify-content: center;
+  }
+}
+.slider__content_pos-absolute {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1200px) {
+    column-gap: 85px;
+    justify-content: center;
+  }
+}
+.slider__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 9px;
+  background: $color-light-s;
+  padding-bottom: 30px;
+  transition: all $shelter-transition;
+  &:hover {
+    background: $color-light-xl;
+    box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    cursor: pointer;
+  }
+  &:hover > .button_secondary {
+    cursor: pointer;
+    background: $color-primary-light;
+    border: 2px solid $color-primary-light;
+  }
+}
+.slider__image {
+  object-fit: cover;
+  border-radius: 9px 9px 0px 0px;
+  width: 270px;
+  height: 270px;
+}
+.slider__title {
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+  line-height: 100%;
+  color: $color-dark-l;
+  margin-top: 30px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+.slider-button-left {
+  @media (max-width: 550px) {
+    order: 2;
+  }
+}
+.slider-button-right {
+  @media (max-width: 550px) {
+    order: 3;
+  }
 }
