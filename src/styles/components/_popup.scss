@@ -1,0 +1,137 @@
+.popup {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  cursor: pointer;
+  overflow: auto;
+}
+.popup__wrapper {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 75px 50px 55px;
+  box-sizing: border-box;
+  @media (max-width: 400px) {
+    padding: 60px 65px 20px 30px;
+  }
+}
+.popup__content {
+  background: #fff;
+  max-width: 900px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+  cursor: default;
+  opacity: 0;
+}
+.popup__image-container {
+  width: 50%;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.popup__image {
+  display: block;
+  width: 100%;
+  border-radius: 9px 0px 0px 9px;
+}
+.popup__info {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 30px 20px 30px 40px;
+  @media (max-width: 1000px) {
+    padding: 10px 10px 10px 20px;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+.popup__title {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 3.5rem;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 10px;
+  @include screen-l {
+    margin-bottom: 0;
+  }
+}
+.popup__subtitle {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 40px;
+  @media (max-width: 1000px) {
+    margin-bottom: 20px;
+  }
+}
+.popup__description {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 40px;
+  @media (max-width: 1000px) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: 400px) {
+    font-size: 1.3rem;
+  }
+}
+.popup__item {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 110%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  margin-bottom: 10px;
+  @media (max-width: 1000px) {
+    margin-bottom: 5px;
+  }
+}
+.popup__button {
+  position: absolute;
+  background: url(../assets/images/other-icons/close.svg) no-repeat 50% 50%;
+  z-index: 10;
+  right: -50px;
+  top: -50px;
+  @media (max-width: 400px) {
+    width: 45px;
+    height: 45px;
+    right: -45px;
+    top: -45px;
+  }
+}
+.popup__button_hover {
+  background-color: $color-primary-light;
+}
+.popup__button:hover {
+  background-color: $color-primary-light;
+}
+
+@keyframes popup-animation {
+  to {
+    opacity: 1;
+  }
+}
+.popup__content_animation {
+  animation: popup-animation  0.7s ease both;
+}
