@@ -1,2 +1,2 @@
-html, scss, native js
+html, scss, native js  
 http://MorozovaAN.github.io/shelter
